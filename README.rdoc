@@ -1,28 +1,23 @@
-== README
+## README.md
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### This README documents the steps used as I learn to integrate Devise authentication with a Rails 4 application. Offical documentaion can be found here: [Devise Documentation](https://github.com/plataformatec/devise)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Add `gem 'devise'` to Gemfile
+* bundle install
+* rails g devise:install
+* rails g devise User
+* be rake db:create  (this command is necessary if using postgresql)
+* be rake db:create
+* In `config/environments/development.rb`:
+copy and paste
+`config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }`
+* Add to User controller
+`before_action :authenticate_member!`
+* In config/routes.rb
+``` root 'home#index'
+  devise_for :users
+  resources :users ```
+* Created Devise Views
+` rails generate devise:views `
+* Customizing Controller and Routes
+* Strong Parameters
