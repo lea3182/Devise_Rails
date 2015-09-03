@@ -53,3 +53,11 @@ If you look at `config/db/schema.rb` you can see all the attributes given to Dev
 * I implemented option 3 and created an initializer file `config/initializers/devise_permitted_parameters.rb` 
 
 ##### Customizing Controller and Routes
+Devise controllers do not have to be generated unless you wish to customize controller action.
+
+Helpful links:
+[Devise Documentation(look under Configuring Controllers)](https://github.com/plataformatec/devise)
+[StackOverflow](http://stackoverflow.com/questions/6234045/how-do-you-access-devise-controllers)
+
+
+
