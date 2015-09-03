@@ -1,6 +1,6 @@
 ## README.md
 
-#### This README documents the steps used as I learn to integrate Devise authentication with a Rails 4 application. Offical documentaion can be found here: [Devise Documentation](https://github.com/plataformatec/devise)
+##### This README documents the steps used as I l used to integrate Devise authentication with a Rails 4 application. Offical documentation can be found here: [Devise Documentation](https://github.com/plataformatec/devise)
 
 * Add `gem 'devise'` to Gemfile
 * bundle install
