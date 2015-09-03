@@ -30,7 +30,7 @@ I added first_name and last_name to User model by:
 ` app/devise/registration/edit.html ` and ` app/devise/registration/edit.html `
 * ` first_name ` and ` last_name ` attributes need to be sanitized
 * There are three ways to sanitize:
-* Override default Devise registration controller
-* "The lazy way" which is to add code in Application controller
-* Add an initializer file
+  1. Override default Devise registration controller
+  2. "The lazy way" which is to add code in Application controller
+  3. Add an initializer file
 * I chose to add an an initalizer file 
