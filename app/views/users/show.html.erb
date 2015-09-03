@@ -1,2 +1,4 @@
 <%= @user.email %>
-hi
+<% if user_signed_in? %>
+  <div><%= link_to "Edit", edit_user_registration_path %></div>
+<% end %>
