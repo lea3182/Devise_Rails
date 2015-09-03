@@ -46,6 +46,8 @@ I added first_name and last_name to User model by:
     devise_parameter_sanitizer.for(:account_update) << :first_name << :last_name
   end
 
-end
-```
+  end
+  ```
   3. Add an initializer file
+
+* I implemented option 3 and created an initializer file `config/initializers/devise_permitted_parameters.rb` 
