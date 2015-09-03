@@ -13,10 +13,24 @@ copy and paste
 * Add to User controller
 `before_action :authenticate_member!`
 * In config/routes.rb
-``` root 'home#index'
+```ruby
+  root 'home#index'
   devise_for :users
-  resources :users ```
+  resources :users 
+  ```
 * Created Devise Views
 ` rails generate devise:views `
 * Customizing Controller and Routes
-* Strong Parameters
+* Adding Form attributes
+I added first_name and last_name to User model by:
+* generating a new migration
+`rails generate migration AddFirstlastToUsers first_name:string last_name:string`
+`rake db:migrate'
+* Add first_name and last_name form attributes to 
+` app/devise/registration/edit.html ` and ` app/devise/registration/edit.html `
+* ` first_name ` and ` last_name ` attributes need to be sanitized
+* There are three ways to sanitize:
+* Override default Devise registration controller
+* "The lazy way" which is to add code in Application controller
+* Add an initializer file
+* I chose to add an an initalizer file 
