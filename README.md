@@ -18,6 +18,7 @@
   devise_for :users            resources matter 
   resources :users 
   ```
+##### Remember to restart your rails server after installing and configuring devise or you will get errors
 * To create Devise Views
 ` rails generate devise:views `
 
